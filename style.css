@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, #2c4446, #28c0c5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  gap: 100px;
+}
+
+h1 {
+  color: rgb(247, 243, 243);
+  margin: 0;
+  font-size: 3rem;
+}
+h2 {
+  color: white;
+  margin: 0;
+}
+h3 {
+  color: rgb(29, 4, 99);
+}
+
+span {
+  color: #f74f0c;
+}
+
+.todo-container {
+  background-color: white;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  width: 25%;
+  padding: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px; /* Adds space between input and button */
+  transition: background-color 0.3s;
+}
+
+ul {
+  display: block;
+  padding-left: 0%;
+}
+
+.todo-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item input[type="checkbox"] {
+  appearance: none; /* Remove default styling */
+  width: 20px; /* Increase the size of the checkbox */
+  height: 20px;
+  border: 2px solid #ccc; /* Border color of the unchecked checkbox */
+  border-radius: 50%; /* Make it round if desired, or use square for checkboxes */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  position: relative;
+}
+
+.todo-item input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff; /* Inner white dot */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #ff6b6b; /* Change color when checked */
+  border-color: #ff6b6b; /* Border color matches background */
+}
+
+.todo-item span {
+  flex-grow: 1; /* Allows the text to take up remaining space */
+  margin-right: 10px;
+  color: black; /* Space between text and delete button */
+}
+
+.completed {
+  text-decoration: line-through; /* Strikethrough effect */
+  color: grey; /* Optional: Change the color to indicate completion */
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+  padding: 5px; /* Add some padding */
+  width: 100px;
+  border-radius: 20px; /* Rounded corners */
+}
+
+.todo-item button:hover {
+  color: #ff4747;
+}
